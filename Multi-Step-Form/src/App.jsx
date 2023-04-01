@@ -1,11 +1,10 @@
 import React from "react";
+import MultiStepForm from './components/multi-step-form';
 
 function App() {
 
   return (
-    <div>
-      app
-    </div>
+    <MultiStepForm />
   )
 }
 
