@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import Step from '../step';
 
-function Step4() {
+function Step4(props) {
   return (
-    <div>Step4</div>
+    <Step {...props} >Step4</Step>
   )
 }
 
