@@ -23,7 +23,7 @@ const Steps = {
   },
   step3: {
     component: Step3,
-    title: "Pick andd-ons",
+    title: "Pick add-ons",
     subtitle: "Add-ons help enchance your gaming experience.",
     hasNextButton: true,
     hasBackButton: true,
@@ -37,7 +37,7 @@ const Steps = {
 };
 
 function MultiStepForm() {
-  const [activeStep, setActiveStep] = useState("step2");
+  const [activeStep, setActiveStep] = useState("step3");
   const ActiveStep = Steps[activeStep].component;
 
   return (

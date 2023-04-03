@@ -4,18 +4,13 @@ import FormJSON from "../../../form.json";
 
 import * as S from "./styled";
 
-import ArcadeIcon from "../../../assets/images/icon-arcade.svg";
-import AdvancedIcon from "../../../assets/images/icon-advanced.svg";
-import ProIcon from "../../../assets/images/icon-pro.svg";
-
-const Icons = {
-  1: ArcadeIcon,
-  2: AdvancedIcon,
-  3: ProIcon,
-};
-
-const DEFAULT_PLAN = 1;
-const DEFAULT_BILLING_TYPE = "monthly";
+import {
+  Icons,
+  DEFAULT_PLAN,
+  DEFAULT_BILLING_TYPE,
+  MONTHLY,
+  YEARLY,
+} from "./constant";
 
 const { step2 } = FormJSON;
 
@@ -26,6 +21,10 @@ function Step2(props) {
 
   const changePlan = (newPlan) => {
     setPlan(newPlan);
+  };
+
+  const changeBillingType = (newBillingType) => {
+    setBillingType(newBillingType);
   };
 
   return (
@@ -42,9 +41,28 @@ function Step2(props) {
               <S.Icon src={Icons[item.id]} />
               <S.Title>{item.title}</S.Title>
               <S.Subtitle>{item.price}</S.Subtitle>
+              {billingType === "yearly" && (
+                <S.Description>{item.description}</S.Description>
+              )}
             </S.RadioLabel>
           ))}
         </S.RadioGroup>
+        <S.BillingGroup>
+          <S.BillingButton
+            type="button"
+            onClick={() => changeBillingType(MONTHLY)}
+            isSelected={billingType === MONTHLY}
+          >
+            Monthly
+          </S.BillingButton>
+          <S.BillingButton
+            type="button"
+            onClick={() => changeBillingType(YEARLY)}
+            isSelected={billingType === YEARLY}
+          >
+            Yearly
+          </S.BillingButton>
+        </S.BillingGroup>
       </S.Step2>
     </Step>
   );
