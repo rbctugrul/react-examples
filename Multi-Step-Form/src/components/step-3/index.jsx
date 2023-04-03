@@ -1,14 +1,18 @@
 import React, { useState } from "react";
+
 import FormJSON from "../../../form.json";
 import Step from "../step";
+
 import * as S from "./styled";
 
 const { step3 } = FormJSON;
 
-function Step3(props) {
-  const [selectedAddons, setSelectedAddons] = useState([]);
+function Step3({ onStepSubmit, formData, ...props }) {
+  const [selectedAddons, setSelectedAddons] = useState(
+    formData.step3.selectedAddons ?? []
+  );
 
-  const billingType = "monthly";
+  const { billingType } = formData.step2;
 
   const changeSelectedAddons = (checked, selectedAddon) => {
     if (checked) {
@@ -20,15 +24,21 @@ function Step3(props) {
     }
   };
 
+  const checkSelected = (id) => selectedAddons.some((i) => i.id === id);
+
+  const onSubmit = () => {
+    onStepSubmit("step3", "step4", {
+      selectedAddons,
+    });
+  };
+
   return (
-    <Step {...props}>
+    <Step {...props} handleSubmit={onSubmit}>
       <S.Step3>
         {step3[billingType].map((item) => (
-          <S.Item
-            key={item.id}
-            isSelected={selectedAddons.some((i) => i.id === item.id)}
-          >
+          <S.Item key={item.id} isSelected={checkSelected(item.id)}>
             <S.Input
+              defaultChecked={checkSelected(item.id)}
               type="checkbox"
               onChange={(e) => changeSelectedAddons(e.target.checked, item)}
             />

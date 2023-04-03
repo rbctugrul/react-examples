@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Step = styled.form`
-  flex: 1; 
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -16,7 +16,7 @@ export const Title = styled.h2`
 `;
 
 export const Subtitle = styled.h3`
-  color: var(--Cool-gray);
+  color: var(--cool-gray);
 `;
 
 export const Body = styled.div`
@@ -30,7 +30,7 @@ export const StepFooter = styled.div`
 `;
 
 export const GoBackButton = styled.button`
-  color: var(--Cool-gray);
+  color: var(--cool-gray);
 
   &:hover {
     color: inherit;
@@ -39,8 +39,8 @@ export const GoBackButton = styled.button`
 
 export const GoNextButton = styled.button`
   margin-left: auto;
-  background-color: var(--Marine-blue);
-  color: var(--White);
-  padding: 8px 24px;
-  border-radius: 8px; 
+  background-color: var(--marine-blue);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 8px;
 `;

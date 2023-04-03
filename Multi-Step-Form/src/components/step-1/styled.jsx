@@ -9,18 +9,18 @@ export const Step1 = styled.div`
 export const Input = styled.input`
   padding: 12px;
   font-size: 16px;
-  border: 1px solid var (--Light-gray);
+  border: 1px solid var(--light-gray);
   border-radius: 8px;
-  color: var(--Marine-blue);
+  color: var(--marine-blue);
   font-weight: 500;
   transition: border-color 200ms ease;
 
   &:hover {
-    border-color: var(--Purplish-blue);
+    border-color: var(--purplish-blue);
   }
 
   &::placeholder {
-    color: var(--Cool-gray);
+    color: var(--cool-gray);
   }
 `;
 
@@ -34,7 +34,7 @@ export const FormItem = styled.div`
     ${({ hasError }) =>
       hasError &&
       css`
-        border-color: var(--Strawberry-red);
+        border-color: var(--strawberry-red);
       `}
   }
 `;
@@ -47,6 +47,6 @@ export const ErrorMessage = styled.p`
   position: absolute;
   top: 0;
   right: 0;
-  color: var(--Strawberry-red);
+  color: var(--strawberry-red);
   font-size: 14px;
 `;

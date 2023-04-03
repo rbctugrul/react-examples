@@ -7,7 +7,7 @@ function Sidebar({ activeStep }) {
   return (
     <S.Sidebar>
       {Items.map((item) => (
-        <S.Item key={item.id} isActive={activeStep === item.id} >
+        <S.Item key={item.id} isActive={activeStep === item.id}>
           <S.ItemNumber>{item.number}</S.ItemNumber>
           <S.ItemBody>
             <S.Subtitle>{item.subtitle}</S.Subtitle>

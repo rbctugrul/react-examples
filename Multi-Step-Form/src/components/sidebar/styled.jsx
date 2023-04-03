@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
-import SidebarBg from "../../../assets/images/bg-sidebar-desktop.svg";
+
+import SidebarBg from "../../assets/bg-sidebar-desktop.svg";
 
 export const Sidebar = styled.div`
   display: flex;
@@ -9,7 +10,7 @@ export const Sidebar = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: var(--White);
+  color: var(--white);
   padding: 24px;
   width: 35%;
   border-radius: 8px;
@@ -18,8 +19,8 @@ export const Sidebar = styled.div`
 export const ItemNumber = styled.span`
   width: 36px;
   height: 36px;
-  border: 1px solid var(--White);
-  border-radius: 50%;
+  border: 1px solid var(--white);
+  border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,9 +35,9 @@ export const Item = styled.div`
     ${({ isActive }) =>
       isActive &&
       css`
-        background-color: var(--Magnolia);
-        color: var(--Marine-blue);
-        border-color: var(--Magnolia);
+        background-color: var(--magnolia);
+        color: var(--marine-blue);
+        border-color: var(--magnolia);
       `}
   }
 `;

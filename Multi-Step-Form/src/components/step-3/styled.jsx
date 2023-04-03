@@ -11,18 +11,18 @@ export const Item = styled.label`
   align-items: center;
   padding: 24px;
   gap: 16px;
-  border: 1px solid var(--Light-gray);
+  border: 1px solid var(--light-gray);
   border-radius: 8px;
 
   ${({ isSelected }) =>
     isSelected &&
     css`
-      background-color: var(--Alabester);
-      border-color: var(--Purplish-blue);
-    `};
+      background-color: var(--alabester);
+      border-color: var(--purplish-blue);
+    `}
 
   &:hover {
-    border-color: var(--Purplish-blue);
+    border-color: var(--purplish-blue);
   }
 `;
 
@@ -38,11 +38,11 @@ export const Title = styled.h4`
 `;
 
 export const Subtitle = styled.p`
-  font-size: 14;
-  color: var(--Cool-gray);
+  font-size: 14px;
+  color: var(--cool-gray);
 `;
 
 export const Price = styled.p`
-  color: var(--Purplish-blue);
+  color: var(--purplish-blue);
   font-weight: 500;
 `;

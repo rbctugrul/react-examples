@@ -1,26 +1,32 @@
 :root {
-
-  --Marine-blue: hsl(213, 100%, 22%);
-  --Purplish-blue: hsl(243, 100%, 62%);
-  --Pastel-blue: hsl(228, 100%, 84%);
-  --Light-blue: hsl(206, 94%, 87%);
-  --Strawberry-red: hsl(354, 84%, 57%);
-  --Cool-gray: hsl(231, 11%, 63%);
-  --Light-gray: hsl(229, 24%, 87%);
-  --Magnolia: hsl(217, 100%, 97%);
-  --Alabaster: hsl(231, 100%, 99%);
-  --White: hsl(0, 0%, 100%);
-
+  --marine-blue: hsl(213, 96%, 18%);
+  --purplish-blue: hsl(243, 100%, 62%);
+  --pastel-blue: hsl(228, 100%, 84%);
+  --light-blue: hsl(206, 94%, 87%);
+  --strawberry-red: hsl(354, 84%, 57%);
+  --cool-gray: hsl(231, 11%, 63%);
+  --light-gray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
 }
 
-body{
+body {
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
-  background-color: var(--Magnolia);
+  background-color: var(--magnolia);
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr min(968px, 96%) 1fr;
+  grid-template-rows: 1fr min(768px, 96%) 1fr;
   line-height: 1.25;
-  color: var(--Marine-blue);
+  color: var(--marine-blue);
+}
+
+body > *{
+  grid-column: 2;
+  grid-row: 2;
+  width: 100%;
+  height: 100%;
 }
