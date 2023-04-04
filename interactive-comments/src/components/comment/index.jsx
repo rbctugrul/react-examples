@@ -4,14 +4,16 @@ import { Reactions } from "./reactions";
 import { Header } from "./header";
 import { Body } from "./body";
 
+import styles from "./styles.module.scss";
 
 function Comment() {
-
   return (
-    <div>
+    <div className={styles.commentWrapper}>
       <Reactions />
-      <Header />
-      <Body />
+      <div className={styles.commentContentArea}>
+        <Header />
+        <Body />
+      </div>
     </div>
   );
 }

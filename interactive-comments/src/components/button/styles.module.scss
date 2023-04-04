@@ -1,0 +1,19 @@
+.button {
+  outline: none;
+  border: 0;
+  background-color: transparent;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  cursor: pointer;
+}
+
+.ghost {
+  color: var(--moderate-blue);
+}
+
+.warning{
+  color: var(--soft-red);
+}

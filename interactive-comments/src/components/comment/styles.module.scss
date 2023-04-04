@@ -1,0 +1,14 @@
+.commentWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.commmentContentArea {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
