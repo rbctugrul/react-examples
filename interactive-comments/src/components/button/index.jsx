@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import { clsx } from "clsx";
 
-import styles from './styles.module.scss'
+import styles from "./styles.module.scss";
 
-function Button({variant = "ghost",children, ...props}) {
+function Button({ variant = "ghost", children, ...props }) {
   return (
-    <button className={`${styles.button} ${styles[variant]}`} {...props}>{children}</button>
-  )
+    <button className={clsx(styles.button, styles[variant])} {...props}>
+      {children}
+    </button>
+  );
 }
 
-export  {Button}
+export { Button };

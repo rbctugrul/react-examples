@@ -5,10 +5,12 @@
   background-color: var(--white);
   border-radius: 8px;
   padding: 16px;
+  width: 100%;
 }
 
 .commmentContentArea {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }

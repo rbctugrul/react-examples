@@ -2,30 +2,47 @@ import React from "react";
 
 import { Button } from "../../button";
 
+import { useComment } from "../useComment";
+
 import styles from "./styles.module.scss";
 
 function Header() {
+  const {
+    currentUser,
+    comment: {
+      createdAt,
+      user: { image, username },
+    },
+  } = useComment();
+
+  const ownedByCurrentUser = currentUser.username === username;
+
   return (
-    <div>
-      <div className="image-wrapper">
-        <img src="https://picsum.photos/200/300" alt="img" />
+    <div className={styles.headerWrapper}>
+      <div className={styles.imageWrapper}>
+        <img src={image.png} alt="img" />
       </div>
-      <h3>username</h3>
-      <span>you</span>
-      <div className="created-at">2 days ago</div>
-      <div className="action-buttons">
-        <Button variant="warning">
-          <img src="./images/icon-delete.svg" alt="img" />
-          Delete
-        </Button>
-        <Button>
-          <img src="./images/icon-delete.svg" alt="img" />
-          Edit
-        </Button>
-        <Button>
-          <img src="./images/icon-delete.svg" alt="img" />
-          Reply
-        </Button>
+      <h3 className={styles.username}>{username}</h3>
+      {ownedByCurrentUser && <span className={styles.youIndicator}>you</span>}
+      <div className={styles.createdAt}>{createdAt}</div>
+      <div className={styles.actionButtons}>
+        {ownedByCurrentUser ? (
+          <>
+            <Button variant="warning">
+              <img src="./images/icon-delete.svg" alt="img" />
+              Delete
+            </Button>
+            <Button>
+              <img src="./images/icon-edit.svg" alt="img" />
+              Edit
+            </Button>
+          </>
+        ) : (
+          <Button>
+            <img src="./images/icon-reply.svg" alt="img" />
+            Reply
+          </Button>
+        )}
       </div>
     </div>
   );
