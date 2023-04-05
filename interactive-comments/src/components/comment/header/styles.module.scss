@@ -1,42 +1,29 @@
-.headerWrapper {
+.commentHeader {
   display: flex;
   align-items: center;
   gap: 8px;
-}
 
-.imageWrapper {
-  img {
+  .ownIndicator {
+    background-color: var(--moderate-blue);
+    padding: 2px 4px;
+    color: var(--white);
+    font-size: 12px;
+  }
+
+  .userImage {
     width: 36px;
     height: 36px;
-    overflow: hidden;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center;
+    border-radius: 999px;
   }
-}
 
-.createdAt {
-  color: var(--grayish-blue);
-  font-size: 14px;
-}
+  .username {
+    color: var(--dark-blue);
+    font-weight: 500;
+  }
 
-.username {
-  font-weight: 500;
-  font-size: 16px;
-  color: var(--dark-blue);
-}
-
-.youIndicator {
-  background-color: var(--moderate-blue);
-  color: var(--white);
-  padding: 2px 4px;
-  font-size: 12px;
-  border-radius: 4px;
-}
-
-.actionButtons {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-left: auto;
+  .actionButtons {
+    margin-left: auto;
+    display: flex;
+    gap: 16px;
+  }
 }

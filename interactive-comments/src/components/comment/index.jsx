@@ -1,21 +1,13 @@
-import React from "react";
+import { CommentProvider } from "./useComment";
+import { Comment as CommentRaw } from "./comment";
 
-import { Reactions } from "./reactions";
-import { Header } from "./header";
-import { Body } from "./body";
-
-import styles from "./styles.module.scss";
-
-function Comment() {
+function CommentWithProvider(props) {
   return (
-    <div className={styles.commentWrapper}>
-      <Reactions />
-      <div className={styles.commentContentArea}>
-        <Header />
-        <Body />
-      </div>
-    </div>
+    <CommentProvider {...props}>
+      <CommentRaw />
+    </CommentProvider>
   );
 }
 
-export { Comment };
+export { useComment } from "./useComment";
+export { CommentWithProvider as Comment };

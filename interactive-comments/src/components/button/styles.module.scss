@@ -1,19 +1,28 @@
 .button {
-  outline: none;
-  border: 0;
-  background-color: transparent;
-
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  font-weight: 500;
+}
 
-  cursor: pointer;
+.primary {
+  background-color: var(--moderate-blue);
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: opacity 200ms;
+
+  &:hover {
+    opacity: 0.75;
+  }
 }
 
 .ghost {
   color: var(--moderate-blue);
 }
 
-.warning{
+.warn {
   color: var(--soft-red);
 }

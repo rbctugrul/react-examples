@@ -3,9 +3,12 @@ import { clsx } from "clsx";
 
 import styles from "./styles.module.scss";
 
-function Button({ variant = "ghost", children, ...props }) {
+function Button({ children, variant = "ghost", className, ...props }) {
   return (
-    <button className={clsx(styles.button, styles[variant])} {...props}>
+    <button
+      {...props}
+      className={clsx(styles.button, className, styles[variant])}
+    >
       {children}
     </button>
   );

@@ -1,15 +1,17 @@
-.reactionsWrapper {
+.reactions {
+  background-color: var(--light-gray);
+  width: 32px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background-color: var(--light-gray);
+  align-items: center;
   border-radius: 4px;
 
-  & > * {
-    width: 32px;
+  .score {
+    color: var(--moderate-blue);
+  }
+
+  .reactionButton {
     height: 32px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
   }
 }

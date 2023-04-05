@@ -1,0 +1,9 @@
+.editWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .updateButton {
+    margin-left: auto;
+  }
+}

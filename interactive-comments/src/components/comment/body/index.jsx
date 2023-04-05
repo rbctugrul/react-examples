@@ -1,17 +1,24 @@
 import React from "react";
-
-import { useComment } from "../useComment";
-
 import styles from "./styles.module.scss";
 
+import { useComment } from "../useComment";
+import { Edit } from "./edit";
+import { Preview } from "./preview";
+
+import { EDIT_MODE, PREVIEW_MODE } from "./constants";
+
+const Modes = {
+  [EDIT_MODE]: Edit,
+  [PREVIEW_MODE]: Preview,
+};
+
 function Body() {
-  const {
-    comment: { content },
-  } = useComment();
+  const { mode } = useComment();
+  const CurrentMode = Modes[mode];
 
   return (
-    <div>
-      <p className={styles.content}>{content}</p>
+    <div className={styles.commentText}>
+      <CurrentMode />
     </div>
   );
 }
