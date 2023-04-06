@@ -1,11 +1,9 @@
 import React, { useContext } from "react";
-
 import { GlobalContext } from "../context/GlobalState";
 import MovieCard from "./MovieCard";
 
 const Watched = () => {
   const { watched } = useContext(GlobalContext);
-
   return (
     <div className="movie-page">
       <div className="container">
@@ -23,7 +21,7 @@ const Watched = () => {
             ))}
           </div>
         ) : (
-          <h2 className="no-movies">Listenizde Film yok...</h2>
+          <h2 className="no-movies">Listenizde Film Yok...</h2>
         )}
       </div>
     </div>

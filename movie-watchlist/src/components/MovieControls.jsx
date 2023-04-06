@@ -8,7 +8,6 @@ const MovieControls = ({ movie, type }) => {
     moveToWatchlist,
     removeMovieFromWatched,
   } = useContext(GlobalContext);
-
   return (
     <div className="inner-card-controls">
       {type === "watchlist" && (

@@ -5,7 +5,7 @@ export default (state, action) => {
         ...state,
         watchlist: [...state.watchlist, action.payload],
       };
-    case "REMOVE_MOVIE_TO_WATCHLIST":
+    case "REMOVE_MOVIE_FROM_WATCHLIST":
       return {
         ...state,
         watchlist: state.watchlist.filter(
@@ -20,7 +20,7 @@ export default (state, action) => {
         ),
         watched: [...state.watched, action.payload],
       };
-    case "MOVE_TO_WATCHLIST":
+    case "MOVE_TO_WATCHED":
       return {
         ...state,
         watched: state.watched.filter(
@@ -28,12 +28,10 @@ export default (state, action) => {
         ),
         watchlist: [...state.watchlist, action.payload],
       };
-    case "REMOVE_MOVIE_TO_WATCHED":
+    case "REMOVE_MOVIE_FROM_WATCHED":
       return {
         ...state,
-        watched: state.watched.filter(
-          (movie) => movie.id !== action.payload
-        ),
+        watched: state.watched.filter((movie) => movie.id !== action.payload),
       };
     default:
       return state;
