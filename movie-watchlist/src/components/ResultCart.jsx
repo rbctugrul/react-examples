@@ -29,7 +29,12 @@ const ResultCart = ({ movie }) => {
             {movie.release_date ? movie.release_date.substring(0, 4) : "-"}
           </h4>
           <h4 className="release-date">
-            IMDB: <b>{movie.vote_average ? movie.vote_average : "-"}</b>
+            IMDB:{" "}
+            <b>
+              {movie.vote_average
+                ? movie.vote_average.toString().substring(0, 3)
+                : "-"}
+            </b>
           </h4>
         </div>
 
