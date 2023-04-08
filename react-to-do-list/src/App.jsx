@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
 import "./App.css";
+import React, { useState, useEffect } from "react";
 import Form from "./components/Form";
 import TodoList from "./components/TodoList";
-
 function App() {
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
@@ -10,8 +9,13 @@ function App() {
   const [filteredTodos, setFilteredTodos] = useState([]);
 
   useEffect(() => {
+    getLocalTodos();
+  }, []);
+
+  useEffect(() => {
     filterHandler(todos);
-  }, [todos, status]);
+    saveLocalTodos();
+  }, [todos, status]); //eslint-disable-line
 
   const filterHandler = () => {
     switch (status) {
@@ -23,14 +27,27 @@ function App() {
         break;
       default:
         setFilteredTodos(todos);
-        break; 
+        break;
+    }
+  };
+
+  //! save to local
+  const saveLocalTodos = () => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  };
+
+  const getLocalTodos = () => {
+    if (localStorage.getItem("todos") === null) {
+      localStorage.setItem("todos", JSON.stringify([]));
+    } else {
+      setTodos(JSON.parse(localStorage.getItem("todos")));
     }
   };
 
   return (
     <div className="App">
       <header>
-        <h1>My todo list d</h1>
+        <h1>MY TODO LIST</h1>
       </header>
       <Form
         inputText={inputText}
