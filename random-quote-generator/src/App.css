@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9ADCFF;
+  font-family: 'Antic Slab', serif;
+}
+
+.quote{
+  padding: 20px 40px;
+  background-color: #FFF89A;
+}
+.btnContainer{
+  margin-top: 20px;
+}
+.btnContainer button{
+  padding: 10px 20px;
+  cursor: pointer;
+}
