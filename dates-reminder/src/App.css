@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #54e346;
+}
+section {
+  background-color: #fffaa4;
+  padding: 40px;
+  font-family: "Antic Slab", serif;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.holiday {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  margin-bottom: 10px;
+}
+img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+h3 {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+p {
+  letter-spacing: 1.2px;
+  margin-top: 8px;
+}
+button {
+  display: block;
+  margin: 0 auto;
+  font-family: "Antic Slab", serif;
+  padding: 12.5px 25px;
+  cursor: pointer;
+  color: black;
+  background-color: #54e346;
+  border: none;
+  font-size: 16px;
+  letter-spacing: 1.2px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: black;
+  color: #54e346;
+}
