@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
+.meme-form {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #898aa6;
+  position: relative;
+}
+
+.inputlar {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* From uiverse.io by @Alaner-xs */
+.input {
+  background-color: #383838;
+  border: 1ex solid none;
+  border-top-width: 1.7em;
+  margin: 0;
+  padding: 0;
+  color: #383838;
+  word-wrap: break-word;
+  outline: 7px solid #383838;
+  height: 30px;
+  font-size: 17px;
+  text-align: center;
+  transition: all 1s;
+  max-width: 190px;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  margin: 10px 0;
+}
+
+.input:hover {
+  border-top-width: 0.2em;
+  background-color: #f1e8e8;
+}
+
+.input:focus {
+  border-top-width: 0.2em;
+  background-color: #f1e8e8;
+}
+
+button {
+  outline: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 140px;
+  height: 50px;
+  border-radius: 0.5em;
+  box-shadow: 0 0.625em 1em 0 rgba(30, 143, 255, 0.35);
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+button div {
+  transform: translateY(0px);
+  width: 100%;
+}
+
+button,
+button div {
+  transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+button div span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0.75em 1.125em;
+}
+
+button div:nth-child(1) {
+  background-color: #1e90ff;
+}
+
+button div:nth-child(2) {
+  background-color: #21dc62;
+}
+
+button:hover {
+  box-shadow: 0 0.625em 1em 0 rgba(33, 220, 98, 0.35);
+}
+
+button:hover div {
+  transform: translateY(-50px);
+}
+
+button p {
+  font-size: 17px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+img {
+  width: 450px;
+  height: 450px;
+  margin-top: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h2 {
+  position: absolute;
+  left: -240px;
+  top: -200px;
+  width: 500px;
+  z-index: 12;
+  font-size: 25px;
+  color: #fff;
+  font-family: "Antic Slab", serif;
+  letter-spacing: 2px;
+  /*  */
+  font-size: 2.5em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0px 2px 0 #000, 2px 0px 0 #000, 0px -2px 0 #000,
+    -2px 0px 0 #000, 2px 2px 5px #000;
+}
+.bottom {
+  margin-top: 300px;
+}
+.image {
+  position: relative;
+  top: 220px;
+}
