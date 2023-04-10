@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Antic Slab", serif;
+}
+img {
+  width: auto;
+  height: 280px;
+}
+.single-tour {
+  width: 500px;
+  height: 600px;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: #a8a4ce;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+footer {
+  margin-top: 25px;
+}
+.tour-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.tour-price {
+  background-color: #fff;
+  padding: 2px 4px;
+  letter-spacing: 2px;
+}
+button {
+  padding: 5px 10px;
+  margin: 10px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: black;
+  color: #fff;
+}

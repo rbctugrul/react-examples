@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.site-info {
+  width: 100%;
+  height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.title {
+  margin-top: -20px;
+  letter-spacing: 1.5px;
+  font-size: 50px;
+  font-family: "Antic Slab", serif;
+  background-color: #a0d995;
+  padding: 10px 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.title:hover {
+  background-color: black;
+  color: #fff;
+}
+.sub-title {
+  margin: 15px;
+  letter-spacing: 5px;
+  font-size: 25px;
+  font-family: "Antic Slab", serif;
+  font-weight: bold;
+}
