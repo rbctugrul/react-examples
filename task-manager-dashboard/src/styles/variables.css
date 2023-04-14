@@ -1,0 +1,34 @@
+:root {
+  --white: #e2ebf8;
+  --gray: #7c859e;
+  --dark-blue: #182b42;
+  --very-dark-blue: #111526;
+  --green: #56b890;
+  --red: #f25f5c;
+  --green-light: #a8dadc50;
+  --red-light: #ffb4b250;
+
+  --gray-opaque: #7c859e20;
+  --dark-blue-opaque: #182b4220;
+  --very-dark-blue-opaque: #11152620;
+  --green-opaque: #56b89020;
+
+  --border-color: #1d2e3f;
+
+  --border-radius-s: 4px;
+  --border-radius-m: 8px;
+
+  --space-s: 4px;
+  --space-m: 8px;
+  --space-l: 16px;
+  --space-xl: 24px;
+  --space-xxl: 32px;
+
+  --font-xs: 12px;
+  --font-s: 14px;
+  --font-m: 16px;
+  --font-l: 18px;
+  --font-xl: 24px;
+  --font-xxl: 32px;
+  --font-xxxl: 48px;
+}
