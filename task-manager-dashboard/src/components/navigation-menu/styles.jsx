@@ -32,6 +32,4 @@ export const IconWrapper = styled.div`
   }
 `;
 
-export const Title = styled.p`
-  
-`;
+export const Title = styled.p``;

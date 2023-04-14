@@ -5,6 +5,7 @@ export const Topbar = styled.div`
   border-bottom: 1px solid var(--border-color);
   display: flex;
   justify-content: flex-end;
+
   & > * {
     border-left: 1px solid var(--border-color);
     padding-left: var(--space-xl);

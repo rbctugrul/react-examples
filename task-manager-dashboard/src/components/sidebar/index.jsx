@@ -1,7 +1,8 @@
 import React from "react";
-import * as S from "./styles";
 import { Logo } from "../logo";
 import { NavigationMenu } from "../navigation-menu";
+
+import * as S from "./styles";
 
 function Sidebar() {
   return (

@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Logo = styled(Link)`
   display: inline-flex;
@@ -14,6 +14,6 @@ export const Logo = styled(Link)`
   border-radius: var(--border-radius-m);
 `;
 
-export const Text = styled.p`
+export const Text = styled.span`
   filter: drop-shadow(0 0 5px var(--gray));
-`
+`;

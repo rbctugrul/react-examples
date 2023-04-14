@@ -5,11 +5,11 @@ function ProfileButton() {
   return (
     <S.ProfileButton>
       <S.Image
-        src="https://avatars.githubusercontent.com/u/96288230?s=40&v=4"
-        alt="TUGRUL ARABACI"
+        src="https://avatars.githubusercontent.com/u/96288230?v=4"
+        alt="Tugrul Arabaci"
       />
       <S.Content>
-        <S.Text>TUGRUL ARABACI</S.Text>
+        <S.Text>Tugrul Arabaci</S.Text>
         <S.Subtitle>Admin</S.Subtitle>
       </S.Content>
     </S.ProfileButton>

@@ -1,9 +1,9 @@
 import React from "react";
-import * as S from "./styles";
-
 import { ProfileButton } from "../profile-button";
 
-function TopBar() {
+import * as S from "./styles";
+
+function Topbar() {
   return (
     <S.Topbar>
       <ProfileButton />
@@ -11,4 +11,4 @@ function TopBar() {
   );
 }
 
-export { TopBar };
+export { Topbar };

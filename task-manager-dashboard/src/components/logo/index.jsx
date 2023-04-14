@@ -4,7 +4,7 @@ import * as S from "./styles";
 function Logo() {
   return (
     <S.Logo to="/">
-      <S.Text>W.</S.Text>
+      <S.Text>w.</S.Text>
     </S.Logo>
   );
 }

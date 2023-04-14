@@ -1,15 +1,16 @@
 import React from "react";
 
-import * as S from "./styles";
-import { Main } from "../../components/main";
-import { TopBar } from "../../components/topbar";
 import { Sidebar } from "../../components/sidebar";
+import { Topbar } from "../../components/topbar";
+import { Main } from "../../components/main";
+
+import * as S from "./styles";
 
 function MainLayout() {
   return (
     <S.MainLayout>
       <Sidebar />
-      <TopBar />
+      <Topbar />
       <Main />
     </S.MainLayout>
   );
