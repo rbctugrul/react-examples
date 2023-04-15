@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #eee;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+img {
+  width: 400px;
+  height: auto;
+}
+h2 {
+  margin-bottom: 10px;
+}
+button {
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 10px 40px;
+}
