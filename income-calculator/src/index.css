@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Source Serif Pro", serif;
+}
+.App {
+  background-color: #c3bef0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+}
+header {
+  margin: 20px 0;
+  width: 500px;
+  /* background-color: #CADEFC; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 {
+  letter-spacing: 1.5px;
+}
+header .total-income {
+  font-size: 25px;
+  background-color: #cadefc;
+  padding: 5px 20px;
+}
+.form-inner input {
+  border: none;
+  padding: 10px 20px;
+  margin-right: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.form-inner input:focus {
+  outline: none;
+}
+.incomeListContainer {
+  margin-top: 20px;
+  width: 500px;
+  background-color: #cadefc;
+  padding: 25px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.btn:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.1);
+}
+button {
+  border: none;
+  padding: 10px 20px;
+  margin-right: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.1);
+}
+.incomeList {
+  background-color: #c3bef0;
+  padding: 10px 20px;
+  width: 450px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 20px;
+  column-gap: 20px;
+}
