@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
+import { getContrastYIQ } from "../helpers";
 
-function Copied() {
+function Copied({ color }) {
   return (
-    <div>Copied</div>
-  )
+    <div
+      className="copied"
+      style={{
+        "--bgColor": `#${color}`,
+        "--textColor": `${getContrastYIQ(color)}`,
+      }}
+    >
+      Copied #{color} to Clipboard
+    </div>
+  );
 }
 
-export default Copied
+export default Copied;

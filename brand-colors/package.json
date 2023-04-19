@@ -13,6 +13,7 @@
     "react-clipboard.js": "^2.0.16",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
+    "react-lazyload": "^3.2.0",
     "react-modal": "^3.16.1",
     "sass": "^1.62.0"
   },

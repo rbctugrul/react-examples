@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Search from "./Search";
 import Brand from "./Brand";
 import MainContext from "./MainContext";
+import LazyLoad from "react-lazyload";
 
 function Content() {
   const { brands } = useContext(MainContext);
