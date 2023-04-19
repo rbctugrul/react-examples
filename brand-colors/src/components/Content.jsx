@@ -1,17 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import Search from "./Search";
-import BrandsData from "../brands.json";
-import { useState } from "react";
 import Brand from "./Brand";
+import MainContext from "./MainContext";
 
 function Content() {
-  const brandsArray = [];
-
-  Object.keys(BrandsData).map((key) => {
-    brandsArray.push(BrandsData[key]);
-  });
-
-  const [brands, setBrands] = useState(brandsArray);
+  const { brands } = useContext(MainContext);
 
   return (
     <main className="content">
@@ -20,7 +13,7 @@ function Content() {
       </header>
       <section className="brands">
         {brands.map((brand) => (
-          <Brand  brand={brand} />
+          <Brand brand={brand} />
         ))}
       </section>
     </main>
