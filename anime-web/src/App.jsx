@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import Popular from "./Components/Popular";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div>App</div>
-  )
+    <BrowserRouter>
+      <div className="App">
+        <Popular />
+      </div>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
