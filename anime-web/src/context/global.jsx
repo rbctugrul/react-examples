@@ -10,6 +10,7 @@ const SEARCH = "SEARCH";
 const GET_POPULAR_ANIME = "GET_POPULAR_ANIME";
 const GET_UPCOMING_ANIME = "GET_UPCOMING_ANIME";
 const GET_AIRING_ANIME = "GET_AIRING_ANIME";
+const GET_PICTURES = "GET_PICTURES";
 
 //reducer
 const reducer = (state, action) => {
@@ -24,14 +25,16 @@ const reducer = (state, action) => {
       return { ...state, upcomingAnime: action.payload, loading: false };
     case GET_AIRING_ANIME:
       return { ...state, airingAnime: action.payload, loading: false };
+    case GET_PICTURES:
+      return { ...state, pictures: action.payload, loading: false };
     default:
       return state;
   }
 };
 
 export const GlobalContextProvider = ({ children }) => {
-  //initial state
-  const initialState = {
+  //intial state
+  const intialState = {
     popularAnime: [],
     upcomingAnime: [],
     airingAnime: [],
@@ -41,9 +44,10 @@ export const GlobalContextProvider = ({ children }) => {
     loading: false,
   };
 
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, intialState);
   const [search, setSearch] = React.useState("");
 
+  //handle change
   const handleChange = (e) => {
     setSearch(e.target.value);
     if (e.target.value === "") {
@@ -51,6 +55,7 @@ export const GlobalContextProvider = ({ children }) => {
     }
   };
 
+  //handle submit
   const handleSubmit = (e) => {
     e.preventDefault();
     if (search) {
@@ -65,7 +70,7 @@ export const GlobalContextProvider = ({ children }) => {
   //fetch popular anime
   const getPopularAnime = async () => {
     dispatch({ type: LOADING });
-    const response = await fetch(`${baseUrl}/top/anime?/filter=bypopularity`);
+    const response = await fetch(`${baseUrl}/top/anime?filter=bypopularity`);
     const data = await response.json();
     dispatch({ type: GET_POPULAR_ANIME, payload: data.data });
   };
@@ -96,6 +101,16 @@ export const GlobalContextProvider = ({ children }) => {
     dispatch({ type: SEARCH, payload: data.data });
   };
 
+  //get anime pictures
+  const getAnimePictures = async (id) => {
+    dispatch({ type: LOADING });
+    const response = await fetch(
+      `https://api.jikan.moe/v4/characters/${id}/pictures`
+    );
+    const data = await response.json();
+    dispatch({ type: GET_PICTURES, payload: data.data });
+  };
+
   //initial render
   React.useEffect(() => {
     getPopularAnime();
@@ -112,6 +127,7 @@ export const GlobalContextProvider = ({ children }) => {
         getPopularAnime,
         getUpcomingAnime,
         getAiringAnime,
+        getAnimePictures,
       }}
     >
       {children}

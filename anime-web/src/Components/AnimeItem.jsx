@@ -42,7 +42,7 @@ function AnimeItem() {
     );
     const data = await response.json();
     setCharacters(data.data);
-    console.log(data);
+    console.log(data.data);
   };
 
   //initial render
