@@ -1,7 +1,9 @@
 import React from "react";
-import Popular from "./Popular";
 import { useGlobalContext } from "../context/global";
+import Popular from "./Popular";
 import styled from "styled-components";
+import Upcoming from "./Upcoming";
+import Airing from "./Airing";
 
 function Homepage() {
   const {
@@ -20,7 +22,10 @@ function Homepage() {
     switch (rendered) {
       case "popular":
         return <Popular rendered={rendered} />;
-
+      case "airing":
+        return <Airing rendered={rendered} />;
+      case "upcoming":
+        return <Upcoming rendered={rendered} />;
       default:
         return <Popular rendered={rendered} />;
     }
@@ -34,7 +39,7 @@ function Homepage() {
             {rendered === "popular"
               ? "Popular Anime"
               : rendered === "airing"
-              ? "Airing Name"
+              ? "Airing Anime"
               : "Upcoming Anime"}
           </h1>
         </div>
@@ -45,10 +50,10 @@ function Homepage() {
                 setRendered("popular");
               }}
             >
-              Popular
+              Popular<i className="fas fa-fire"></i>
             </button>
           </div>
-          <form action="" className="search-form">
+          <form action="" className="search-form" onSubmit={handleSubmit}>
             <div className="input-control">
               <input
                 type="text"
@@ -56,9 +61,7 @@ function Homepage() {
                 value={search}
                 onChange={handleChange}
               />
-              <button type="submit" onClick={handleSubmit}>
-                Search
-              </button>
+              <button type="submit">Search</button>
             </div>
           </form>
           <div className="filter-btn airing-filter">
@@ -83,6 +86,7 @@ function Homepage() {
           </div>
         </div>
       </header>
+      {switchComponent()}
     </HomepageStyled>
   );
 }
