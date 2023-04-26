@@ -18,6 +18,8 @@ const reducer = (state, action) => {
       return { ...state, loading: true };
     case GET_POPULAR_ANIME:
       return { ...state, popularAnime: action.payload, loading: false };
+    case SEARCH:
+      return { ...state, searchResults: action.payload, loading: false };
     default:
       return state;
   }
@@ -36,6 +38,25 @@ export const GlobalContextProvider = ({ children }) => {
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [search, setSearch] = React.useState("");
+
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+    if (e.target.value === "") {
+      state.isSearch = false;
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (search) {
+      searchAnime(search);
+      state.isSearch = true;
+    } else {
+      state.isSearch = false;
+      alert("Please enter a search term");
+    }
+  };
 
   //fetch popular anime
   const getPopularAnime = async () => {
@@ -43,6 +64,16 @@ export const GlobalContextProvider = ({ children }) => {
     const response = await fetch(`${baseUrl}/top/anime?/filter=bypopularity`);
     const data = await response.json();
     dispatch({ type: GET_POPULAR_ANIME, payload: data.data });
+  };
+
+  //search anime
+  const searchAnime = async (anime) => {
+    dispatch({ type: LOADING });
+    const response = await fetch(
+      `https://api.jikan.moe/v4/anime?q=${anime}&order_by=popularity&sort=asc&sfw`
+    );
+    const data = await response.json();
+    dispatch({ type: SEARCH, payload: data.data });
   };
 
   //initial render
@@ -54,6 +85,10 @@ export const GlobalContextProvider = ({ children }) => {
     <GlobalContext.Provider
       value={{
         ...state,
+        handleChange,
+        handleSubmit,
+        searchAnime,
+        search,
       }}
     >
       {children}
