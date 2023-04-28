@@ -1,9 +1,14 @@
 import React from "react";
+import "./globals.css";
+import Header from "@/components/Header";
 
 const Layout = ({ children }) => {
   return (
     <html>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 };
