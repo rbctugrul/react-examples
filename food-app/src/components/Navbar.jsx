@@ -61,6 +61,7 @@ const Navbar = () => {
         }
       >
         <AiOutlineClose
+          onClick={() => setNav(!nav)}
           size={30}
           className="absolute right-4 top-4 cursor-pointer"
         />
